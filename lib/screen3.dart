@@ -23,8 +23,8 @@ class _SplashScreen2State extends State<SplashScreen2> {
               height: MediaQuery.of(context).size.height,
               decoration: BoxDecoration(
                 color: Colors.yellow,
-                image: new DecorationImage(
-                    image: new AssetImage("images/ScreenThree.jpg"),
+                image: const DecorationImage(
+                    image: const AssetImage("images/ScreenThree.jpg"),
                     fit: BoxFit.fitWidth,
                     alignment: Alignment.topLeft),
               ),
@@ -32,32 +32,7 @@ class _SplashScreen2State extends State<SplashScreen2> {
                 mainAxisAlignment: MainAxisAlignment.end,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Container(
-                    width: double.infinity,
-                    height: MediaQuery.of(context).size.height * 0.55,
-                    padding: EdgeInsets.symmetric(horizontal: 30),
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(50),
-                        topRight: Radius.circular(50),
-                      ),
-                    ),
-                    child: Column(
-                      children: [
-                        SizedBox(
-                          height: 20,
-                        ),
-                        Text("Let's Go ....."),
-                        SizedBox(
-                          height: 20,
-                        ),
-                        Text(
-                          "",
-                        )
-                      ],
-                    ),
-                  ),
+                  detailsBox(context),
                 ],
               ),
             ),
