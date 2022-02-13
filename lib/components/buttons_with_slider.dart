@@ -4,7 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:group3/components/rounded_shape.dart';
 
 class ButtonWithSlider extends StatefulWidget {
-  ButtonWithSlider({Key? key, required this.activeNumber, required this.onPress}) : super(key: key);
+  ButtonWithSlider(
+      {Key? key, required this.activeNumber, required this.onPress})
+      : super(key: key);
   int activeNumber;
   Function onPress;
 
@@ -64,7 +66,7 @@ class _ButtonWithSliderState extends State<ButtonWithSlider> {
                   borderRadius: BorderRadius.circular(50),
                 ),
               ),
-              onPressed: () {},
+              onPressed: widget.onPress(),
               child: Text("Next"),
             ),
           ],
