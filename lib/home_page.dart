@@ -43,7 +43,19 @@ class _MyHomePageState extends State<MyHomePage> {
                         topRight: Radius.circular(50),
                       ),
                     ),
-                  
+                    child: Column(
+                      children: [
+                        SizedBox(
+                          height: 20,
+                        ),
+                        Text("Welcome!"),
+                        SizedBox(
+                          height: 20,
+                        ),
+                        Text(
+                            "Explore the all new way \nto build your fitness & find the \nperfect fit for you.",)
+                      ],
+                    ),
                   ),
                 ],
               ),
