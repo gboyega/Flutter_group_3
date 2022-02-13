@@ -31,14 +31,14 @@ class _ButtonWithSliderState extends State<ButtonWithSlider> {
               width: 10,
             ),
             RoundedShape(
-              color: widget.activeNumber == 2 ? Colors.red : Colors.black54,
+              color: widget.activeNumber == 2 ? Colors.yellow : Colors.black54,
               active: widget.activeNumber == 2 ? true : false,
             ),
             SizedBox(
               width: 10,
             ),
             RoundedShape(
-              color: widget.activeNumber == 3 ? Colors.yellow : Colors.black54,
+              color: widget.activeNumber == 3 ? Colors.red : Colors.black54,
               active: widget.activeNumber == 3 ? true : false,
             ),
           ],

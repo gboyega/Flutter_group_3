@@ -32,9 +32,9 @@ class _ScreenTwoState extends State<ScreenTwo> {
                 ),
                 detailsBox(
                     context,
-                    "Let's go...",
-                    "Get the new fitness updates everyday & improve performance",
-                    3,
+                    "Customize",
+                    "Feel free to adjust your diet & workout settings according to your comfort",
+                    2,
                     () {})
               ],
             ),
