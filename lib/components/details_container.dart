@@ -30,10 +30,13 @@ Container detailsBox(BuildContext context, String titleText, String subText,
         ),
         Text(
           subText,
-          style: const TextStyle(fontSize: 15),
+          style: const TextStyle(
+            fontSize: 15,
+          ),
+          textAlign: TextAlign.center,
         ),
         const SizedBox(
-          height: 20,
+          height: 30,
         ),
         ButtonWithSlider(
           activeNumber: page,
