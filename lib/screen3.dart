@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:group3/components/details_container.dart';
 
 class SplashScreen2 extends StatefulWidget {
   const SplashScreen2({Key? key, required this.title}) : super(key: key);
@@ -21,13 +22,6 @@ class _SplashScreen2State extends State<SplashScreen2> {
             child: Container(
               width: MediaQuery.of(context).size.width,
               height: MediaQuery.of(context).size.height,
-              decoration: BoxDecoration(
-                color: Colors.yellow,
-                image: const DecorationImage(
-                    image: const AssetImage("images/ScreenThree.jpg"),
-                    fit: BoxFit.fitWidth,
-                    alignment: Alignment.topLeft),
-              ),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.end,
                 crossAxisAlignment: CrossAxisAlignment.center,
