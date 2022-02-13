@@ -5,7 +5,7 @@ Container detailsBox(BuildContext context, String titleText, String subText,
     int page, Function onPress) {
   return Container(
     constraints: const BoxConstraints(
-        minHeight: 700, minWidth: double.infinity, maxHeight: 1000),
+        minHeight: 0, minWidth: double.infinity, maxHeight: 400),
     padding: const EdgeInsets.symmetric(horizontal: 30),
     decoration: const BoxDecoration(
       color: Colors.white,
@@ -17,14 +17,14 @@ Container detailsBox(BuildContext context, String titleText, String subText,
     child: Column(
       children: [
         const SizedBox(
-          height: 30,
+          height: 40,
         ),
         Text(
           titleText,
           style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 40),
         ),
         const SizedBox(
-          height: 20,
+          height: 40,
         ),
         Center(
           child: Text(
@@ -39,7 +39,7 @@ Container detailsBox(BuildContext context, String titleText, String subText,
           onPress: onPress,
         ),
         const SizedBox(
-          height: 30,
+          height: 20,
         ),
       ],
     ),

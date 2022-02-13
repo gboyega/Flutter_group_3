@@ -24,14 +24,14 @@ class _ButtonWithSliderState extends State<ButtonWithSlider> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             RoundedShape(
-              color: widget.activeNumber == 1 ? Colors.yellow : Colors.black54,
+              color: widget.activeNumber == 1 ? Colors.blue : Colors.black54,
               active: widget.activeNumber == 1 ? true : false,
             ),
             SizedBox(
               width: 10,
             ),
             RoundedShape(
-              color: widget.activeNumber == 2 ? Colors.yellow : Colors.black54,
+              color: widget.activeNumber == 2 ? Colors.red : Colors.black54,
               active: widget.activeNumber == 2 ? true : false,
             ),
             SizedBox(
