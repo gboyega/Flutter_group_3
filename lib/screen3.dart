@@ -1,42 +1,44 @@
 import 'package:flutter/material.dart';
+import 'package:group3/components/appbar.dart';
+import 'package:group3/components/details_container.dart';
 
-class SplashScreen2 extends StatefulWidget {
-  const SplashScreen2({Key? key, required this.title}) : super(key: key);
+class ScreenThree extends StatefulWidget {
+  const ScreenThree({Key? key, required this.title}) : super(key: key);
 
   final String title;
 
   @override
-  State<SplashScreen2> createState() => _SplashScreen2State();
+  State<ScreenThree> createState() => _ScreenThreeState();
 }
 
-class _SplashScreen2State extends State<SplashScreen2> {
+class _ScreenThreeState extends State<ScreenThree> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: AppBar(
-          title: Text(widget.title),
+    return Container(
+      decoration: const BoxDecoration(
+        image: DecorationImage(
+          image: AssetImage("images/ScreenThree.jpg"),
+          fit: BoxFit.fill,
         ),
-        body: SafeArea(
-          child: SingleChildScrollView(
-            child: Container(
-              width: MediaQuery.of(context).size.width,
-              height: MediaQuery.of(context).size.height,
-              decoration: BoxDecoration(
-                color: Colors.yellow,
-                image: const DecorationImage(
-                    image: const AssetImage("images/ScreenThree.jpg"),
-                    fit: BoxFit.fitWidth,
-                    alignment: Alignment.topLeft),
-              ),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.end,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  detailsBox(context),
-                ],
-              ),
+      ),
+      child: Scaffold(
+          backgroundColor: Colors.transparent,
+          appBar: BaseAppBar(appBar: AppBar()),
+          body: SingleChildScrollView(
+            child: Column(
+              children: [
+                SizedBox(
+                  height: MediaQuery.of(context).size.height * 0.5,
+                ),
+                detailsBox(
+                    context,
+                    "Let's go...",
+                    "Get the new fitness updates everyday & improve performance",
+                    3,
+                    () {})
+              ],
             ),
-          ),
-        ));
+          )),
+    );
   }
 }

@@ -2,22 +2,22 @@ import 'package:flutter/material.dart';
 import 'package:group3/components/appbar.dart';
 import 'package:group3/components/details_container.dart';
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
+class ScreenTwo extends StatefulWidget {
+  const ScreenTwo({Key? key, required this.title}) : super(key: key);
 
   final String title;
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<ScreenTwo> createState() => _ScreenTwoState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _ScreenTwoState extends State<ScreenTwo> {
   @override
   Widget build(BuildContext context) {
     return Container(
       decoration: const BoxDecoration(
         image: DecorationImage(
-          image: AssetImage("images/ScreenOne.jpg"),
+          image: AssetImage("images/ScreenTwo.jpg"),
           fit: BoxFit.fill,
         ),
       ),
@@ -32,9 +32,9 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 detailsBox(
                     context,
-                    "Welcome!",
-                    "Explore the all new way to build your fitness and find the perfect fit for you",
-                    1,
+                    "Customize",
+                    "Feel free to adjust your diet & workout settings according to your comfort",
+                    2,
                     () {})
               ],
             ),

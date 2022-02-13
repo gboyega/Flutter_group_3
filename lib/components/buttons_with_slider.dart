@@ -4,8 +4,11 @@ import 'package:flutter/material.dart';
 import 'package:group3/components/rounded_shape.dart';
 
 class ButtonWithSlider extends StatefulWidget {
-  ButtonWithSlider({Key? key, required this.activeNumber}) : super(key: key);
+  ButtonWithSlider(
+      {Key? key, required this.activeNumber, required this.onPress})
+      : super(key: key);
   int activeNumber;
+  Function onPress;
 
   @override
   _ButtonWithSliderState createState() => _ButtonWithSliderState();
@@ -21,7 +24,7 @@ class _ButtonWithSliderState extends State<ButtonWithSlider> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             RoundedShape(
-              color: widget.activeNumber == 1 ? Colors.yellow : Colors.black54,
+              color: widget.activeNumber == 1 ? Colors.blue : Colors.black54,
               active: widget.activeNumber == 1 ? true : false,
             ),
             SizedBox(
@@ -35,7 +38,7 @@ class _ButtonWithSliderState extends State<ButtonWithSlider> {
               width: 10,
             ),
             RoundedShape(
-              color: widget.activeNumber == 3 ? Colors.yellow : Colors.black54,
+              color: widget.activeNumber == 3 ? Colors.red : Colors.black54,
               active: widget.activeNumber == 3 ? true : false,
             ),
           ],
@@ -63,7 +66,7 @@ class _ButtonWithSliderState extends State<ButtonWithSlider> {
                   borderRadius: BorderRadius.circular(50),
                 ),
               ),
-              onPressed: () {},
+              onPressed: widget.onPress(),
               child: Text("Next"),
             ),
           ],

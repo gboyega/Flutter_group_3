@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:group3/components/buttons_with_slider.dart';
 
-Container detailsBox(BuildContext context) {
+Container detailsBox(BuildContext context, String titleText, String subText,
+    int page, Function onPress) {
   return Container(
-    width: double.infinity,
-    height: MediaQuery.of(context).size.height * 0.55,
-    padding: EdgeInsets.symmetric(horizontal: 30),
-    decoration: BoxDecoration(
+    constraints: BoxConstraints(
+      minHeight: MediaQuery.of(context).size.height * 0.2,
+      minWidth: double.infinity,
+    ),
+    padding: const EdgeInsets.symmetric(horizontal: 30),
+    decoration: const BoxDecoration(
       color: Colors.white,
       borderRadius: BorderRadius.only(
         topLeft: Radius.circular(50),
@@ -14,16 +18,33 @@ Container detailsBox(BuildContext context) {
     ),
     child: Column(
       children: [
-        SizedBox(
-          height: 20,
-        ),
-        Text("Let's Go ....."),
-        SizedBox(
-          height: 20,
+        const SizedBox(
+          height: 30,
         ),
         Text(
-          "",
-        )
+          titleText,
+          style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 40),
+        ),
+        const SizedBox(
+          height: 30,
+        ),
+        Text(
+          subText,
+          style: const TextStyle(
+            fontSize: 15,
+          ),
+          textAlign: TextAlign.center,
+        ),
+        const SizedBox(
+          height: 30,
+        ),
+        ButtonWithSlider(
+          activeNumber: page,
+          onPress: onPress,
+        ),
+        const SizedBox(
+          height: 30,
+        ),
       ],
     ),
   );
