@@ -53,7 +53,7 @@ class _SplashScreen2State extends State<SplashScreen2> {
                           height: 20,
                         ),
                         Text(
-                          "",
+                          "Get the new fitness app everyday & improve performance.",
                         )
                       ],
                     ),
