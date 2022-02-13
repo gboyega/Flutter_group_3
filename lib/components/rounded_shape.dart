@@ -1,18 +1,19 @@
 import 'package:flutter/material.dart';
 
 class RoundedShape extends StatelessWidget {
-  const RoundedShape(
-      {Key? key,
-      required this.color,
-      required this.height,
-      required this.width})
+  RoundedShape(
+      {Key? key, required this.color, this.width = 10, this.active = false})
       : super(key: key);
   final Color color;
-  final double width;
-  final double height;
+  double width;
+  bool active;
 
   @override
   Widget build(BuildContext context) {
+    if (active) {
+      width = 30;
+    }
+
     return Container(
       width: width,
       height: 10,

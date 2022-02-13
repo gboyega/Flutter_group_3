@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:group3/components/buttons_with_slider.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key, required this.title}) : super(key: key);
@@ -17,8 +16,6 @@ class _MyHomePageState extends State<MyHomePage> {
         appBar: AppBar(
           title: Text(widget.title),
         ),
-        body: Container(
-          child: ButtonWithSlider(),
-        ));
+        body: Container());
   }
 }

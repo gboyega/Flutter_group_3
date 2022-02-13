@@ -3,9 +3,15 @@
 import 'package:flutter/material.dart';
 import 'package:group3/components/rounded_shape.dart';
 
-class ButtonWithSlider extends StatelessWidget {
-  const ButtonWithSlider({Key? key}) : super(key: key);
+class ButtonWithSlider extends StatefulWidget {
+  ButtonWithSlider({Key? key, required this.activeNumber}) : super(key: key);
+  int activeNumber;
 
+  @override
+  _ButtonWithSliderState createState() => _ButtonWithSliderState();
+}
+
+class _ButtonWithSliderState extends State<ButtonWithSlider> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -14,15 +20,24 @@ class ButtonWithSlider extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            RoundedShape(color: Colors.yellow, width: 30, height: 10),
+            RoundedShape(
+              color: widget.activeNumber == 1 ? Colors.yellow : Colors.black54,
+              active: widget.activeNumber == 1 ? true : false,
+            ),
             SizedBox(
               width: 10,
             ),
-            RoundedShape(color: Colors.black54, width: 10, height: 10),
+            RoundedShape(
+              color: widget.activeNumber == 2 ? Colors.yellow : Colors.black54,
+              active: widget.activeNumber == 2 ? true : false,
+            ),
             SizedBox(
               width: 10,
             ),
-            RoundedShape(color: Colors.black54, width: 10, height: 10),
+            RoundedShape(
+              color: widget.activeNumber == 3 ? Colors.yellow : Colors.black54,
+              active: widget.activeNumber == 3 ? true : false,
+            ),
           ],
         ),
         SizedBox(
@@ -32,8 +47,14 @@ class ButtonWithSlider extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             TextButton(
+              style: TextButton.styleFrom(
+                primary: Colors.black38,
+              ),
               onPressed: () {},
-              child: Text("Skip"),
+              child: Text(
+                "Skip",
+                style: TextStyle(fontWeight: FontWeight.bold),
+              ),
             ),
             ElevatedButton(
               style: ElevatedButton.styleFrom(
