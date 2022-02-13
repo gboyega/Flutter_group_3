@@ -16,7 +16,7 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         backgroundColor:Colors.transparent,
         centerTitle: false,
-        title: Text(
+        title: const Text(
           "BeFit",
           style: TextStyle(fontSize: 25.0,
           color: Colors.white,
