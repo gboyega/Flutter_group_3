@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
+class SplashScreen2 extends StatefulWidget {
+  const SplashScreen2({Key? key, required this.title}) : super(key: key);
 
   final String title;
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<SplashScreen2> createState() => _SplashScreen2State();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _SplashScreen2State extends State<SplashScreen2> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,9 +22,9 @@ class _MyHomePageState extends State<MyHomePage> {
               width: MediaQuery.of(context).size.width,
               height: MediaQuery.of(context).size.height,
               decoration: BoxDecoration(
-                color: Colors.blue,
+                color: Colors.yellow,
                 image: new DecorationImage(
-                    image: new AssetImage("images/ScreenOne.jpg"),
+                    image: new AssetImage("images/ScreenTwo.jpg"),
                     fit: BoxFit.fitWidth,
                     alignment: Alignment.topLeft),
               ),
@@ -48,12 +48,12 @@ class _MyHomePageState extends State<MyHomePage> {
                         SizedBox(
                           height: 20,
                         ),
-                        Text("Welcome!"),
+                        Text("Customize"),
                         SizedBox(
                           height: 20,
                         ),
                         Text(
-                          "Explore the all new way to build your fitness & find the perfect fit for you.",
+                          "Feel free to adjust all your workout & diet settings according to your comfort",
                         )
                       ],
                     ),
