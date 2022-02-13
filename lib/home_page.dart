@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:group3/components/appbar.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key, required this.title}) : super(key: key);
@@ -13,19 +14,11 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor:Colors.transparent,
-        centerTitle: false,
-        title: const Text(
-          "BeFit",
-          style: TextStyle(fontSize: 25.0,
-          color: Colors.white,
-          fontWeight: FontWeight.bold),
-          ),
-      ),
+      appBar: BaseAppBar(appBar: AppBar()),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
+          children: const [Text("'hfbknfvkjnkjfvdk")],
         ),
       ),
     );
