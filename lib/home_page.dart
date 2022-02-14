@@ -30,12 +30,15 @@ class _MyHomePageState extends State<MyHomePage> {
                 SizedBox(
                   height: MediaQuery.of(context).size.height * 0.5,
                 ),
-                detailsBox(
-                    context,
-                    "Welcome!",
-                    "Explore the all new way to build your fitness and find the perfect fit for you",
-                    1,
-                    () {})
+                DetailsBox(
+                  titleText: "Welcome!",
+                  subText:
+                      "Explore the all new way to build your fitness and find the perfect fit for you",
+                  page: 1,
+                  onPress: () {
+                    Navigator.pushNamed(context, '/screen2');
+                  },
+                ),
               ],
             ),
           )),

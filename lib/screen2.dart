@@ -30,12 +30,15 @@ class _ScreenTwoState extends State<ScreenTwo> {
                 SizedBox(
                   height: MediaQuery.of(context).size.height * 0.5,
                 ),
-                detailsBox(
-                    context,
-                    "Customize",
-                    "Feel free to adjust your diet & workout settings according to your comfort",
-                    2,
-                    () {})
+                DetailsBox(
+                  titleText: "Customize",
+                  subText:
+                      "Feel free to adjust your diet & workout settings according to your comfort",
+                  page: 2,
+                  onPress: () {
+                    Navigator.pushNamed(context, '/screen3');
+                  },
+                ),
               ],
             ),
           )),

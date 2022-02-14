@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:group3/home_page.dart';
 import 'package:group3/screen2.dart';
+import 'package:group3/screen3.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -13,11 +14,11 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const ScreenTwo(title: "screen"),
+      home: const MyHomePage(title: "screen"),
       routes: {
-        '/home': (context) => ScreenTwo(title: "home_page"),
+        '/home': (context) => MyHomePage(title: "home_page"),
         '/screen2': (context) => ScreenTwo(title: "screen2"),
-        '/screen3': (context) => ScreenTwo(title: "screen3"),
+        '/screen3': (context) => ScreenThree(title: "screen3"),
       },
     );
   }

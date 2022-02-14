@@ -30,12 +30,15 @@ class _ScreenThreeState extends State<ScreenThree> {
                 SizedBox(
                   height: MediaQuery.of(context).size.height * 0.5,
                 ),
-                detailsBox(
-                    context,
-                    "Let's go...",
-                    "Get the new fitness updates everyday & improve performance",
-                    3,
-                    () {})
+                DetailsBox(
+                  titleText: "Let's go...",
+                  subText:
+                      "Get the new fitness updates everyday & improve performance",
+                  page: 3,
+                  onPress: () {
+                    Navigator.pushNamed(context, '/screen3');
+                  },
+                ),
               ],
             ),
           )),

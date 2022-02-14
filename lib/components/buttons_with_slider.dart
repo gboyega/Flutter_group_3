@@ -66,7 +66,9 @@ class _ButtonWithSliderState extends State<ButtonWithSlider> {
                   borderRadius: BorderRadius.circular(50),
                 ),
               ),
-              onPressed: widget.onPress(),
+              onPressed: () {
+                widget.onPress();
+              },
               child: Text("Next"),
             ),
           ],
