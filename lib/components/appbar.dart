@@ -12,6 +12,7 @@ class BaseAppBar extends StatelessWidget implements PreferredSizeWidget {
     return AppBar(
       backgroundColor: Colors.transparent,
       centerTitle: false,
+      automaticallyImplyLeading: false,
       title: const Text(
         "BeFit",
         style: TextStyle(
