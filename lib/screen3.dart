@@ -36,7 +36,7 @@ class _ScreenThreeState extends State<ScreenThree> {
                       "Get the new fitness updates everyday & improve performance",
                   page: 3,
                   onPress: () {
-                    Navigator.pushNamed(context, '/screen3');
+                    Navigator.pushNamed(context, '/home');
                   },
                 ),
               ],
