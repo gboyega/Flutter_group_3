@@ -5,7 +5,7 @@ import 'package:group3/screen2.dart';
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
+  // This widget is the root of your appliscation.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -14,6 +14,11 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: const ScreenTwo(title: "screen"),
+      routes: {
+        '/home': (context) => ScreenTwo(title: "home_page"),
+        '/screen2': (context) => ScreenTwo(title: "screen2"),
+        '/screen3': (context) => ScreenTwo(title: "screen3"),
+      },
     );
   }
 }
